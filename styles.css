@@ -1,0 +1,133 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #111111;
+    color: #f0f0f0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.app {
+    width: 100%;
+    max-width: 520px;
+}
+
+.card {
+    width: 100%;
+    background: #1b1b1b;
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid #2f2f2f;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #f0f0f0;
+}
+
+.subtitle {
+    margin-bottom: 18px;
+    color: #aaaaaa;
+    line-height: 1.4;
+}
+
+.scores {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.score-box {
+    background: #212121;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+}
+
+.score-title {
+    display: block;
+    margin-bottom: 6px;
+    color: #bbbbbb;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+}
+
+.score-box strong {
+    font-size: 1.7rem;
+}
+
+.choices {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.choice {
+    background: #212121;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    padding: 14px 10px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: #f0f0f0;
+}
+
+.choice:hover,
+.choice:focus-visible {
+    background: #2a2a2a;
+    border-color: #444444;
+}
+
+.status {
+    background: #212121;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    padding: 16px;
+    display: grid;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.status p {
+    margin: 0;
+    font-weight: normal;
+    color: #f0f0f0;
+}
+
+.status span {
+    font-size: 0.95rem;
+    color: #cccccc;
+}
+
+.reset-button {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    background: #222222;
+    color: #f0f0f0;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.reset-button:hover {
+    background: #2d2d2d;
+}
+
+@media (max-width: 520px) {
+    .choices {
+        grid-template-columns: 1fr;
+    }
+}
