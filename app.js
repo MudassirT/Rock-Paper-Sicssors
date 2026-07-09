@@ -8,7 +8,7 @@ const resetButton = document.querySelector("#resetButton");
 
 let playerScore = 0;
 let computerScore = 0;
-
+// Defines the rules of the game, where each key beats the value associated with it
 const rules = {
     rock: "scissors",
     paper: "rock",
@@ -19,7 +19,7 @@ function updateScoreBoard() {
     myScoreNum.textContent = playerScore;
     comScoreNum.textContent = computerScore;
 }
-
+// Updates the result text based on the outcome of the round
 function updateResultText(result, playerChoice, computerChoice) {
     const messages = {
         win: `You win! ${playerChoice} beats ${computerChoice}`,
@@ -32,7 +32,7 @@ function updateResultText(result, playerChoice, computerChoice) {
     playerMoveEl.textContent = `You: ${playerChoice}`;
     computerMoveEl.textContent = `Comp: ${computerChoice}`;
 }
-
+// Computer randomly selects a choice from the rules object
 function getComputerChoice() {
     const choices = Object.keys(rules);
     return choices[Math.floor(Math.random() * choices.length)];
