@@ -77,17 +77,47 @@ h1 {
 .choice {
     background: #212121;
     border: 1px solid #333333;
-    border-radius: 10px;
-    padding: 14px 10px;
+    border-radius: 22px;
+    padding: 16px 12px;
     cursor: pointer;
     font-size: 0.95rem;
     color: #f0f0f0;
+    display: grid;
+    gap: 12px;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 150ms ease, border-color 150ms ease, background 150ms ease;
+}
+
+.choice-icon {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    display: grid;
+    place-items: center;
+}
+
+.choice-icon img {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+}
+
+.choice-label {
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #e2e8f0;
 }
 
 .choice:hover,
 .choice:focus-visible {
+    transform: translateY(-2px);
     background: #2a2a2a;
-    border-color: #444444;
+    border-color: #5b5b5b;
 }
 
 .status {
